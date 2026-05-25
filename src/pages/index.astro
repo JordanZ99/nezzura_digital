@@ -1,11 +1,972 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <!-- ════════════════════════════════════════════════════════════════
+       NAVBAR
+       ════════════════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">Nezzura Digital</a>
+      <div class="navbar-links" id="navLinks">
+        <a href="#servicios">Servicios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#precios">Precios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="btn btn-primary btn-sm mobile-nav-cta">Agenda una llamada &rarr;</a>
+      </div>
+      <a href="#contacto" class="btn btn-primary btn-sm desktop-nav-cta">Agenda una llamada &rarr;</a>
+      <button class="nav-hamburger" id="navToggle" aria-label="Menú" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════════════════════════════ -->
+  <header class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-stat">
+        <span class="hero-stat-num">78%</span>
+        <span class="hero-stat-text">de los pequeños negocios en México pierde clientes por no tener presencia digital profesional</span>
+      </p>
+
+      <h1 class="hero-title">
+        <span class="hero-main">Tu negocio existe.</span>
+        <span class="hero-main hero-main-accent">Ahora necesita existir en internet.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Nosotros lo resolvemos en días, no en meses.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#servicios" class="btn btn-primary">Ver qué hacemos</a>
+        <a href="#contacto" class="btn btn-secondary">Agenda una llamada gratis</a>
+      </div>
+
+      <p class="hero-location">&mdash; Cancún, M&eacute;xico &middot; Atendemos todo el pa&iacute;s</p>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Conoce más</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       EL PROBLEMA
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="section problema" id="problema">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">¿Te identificas?</span>
+        <h2 class="section-title">¿Te identificas con alguno de estos?</h2>
+      </div>
+
+      <div class="problema-grid">
+        <div class="problema-item">
+          <span class="problema-icon">→</span>
+          <p>Tienes un negocio real pero cuando alguien te busca en Google, no apareces.</p>
+        </div>
+        <div class="problema-item">
+          <span class="problema-icon">→</span>
+          <p>Tu competencia tiene p&aacute;gina web y t&uacute; todav&iacute;a mandas tu men&uacute; por WhatsApp como imagen.</p>
+        </div>
+        <div class="problema-item">
+          <span class="problema-icon">→</span>
+          <p>Intentaste crear tu propia p&aacute;gina y qued&oacute; como si fuera 2009.</p>
+        </div>
+        <div class="problema-item">
+          <span class="problema-icon">→</span>
+          <p>Sabes que necesitas digitalizarte pero no sabes por d&oacute;nde empezar ni cu&aacute;nto cuesta.</p>
+        </div>
+      </div>
+
+      <div class="problema-outro">
+        <p><strong>Nezzura Digital</strong> existe para resolver exactamente eso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SERVICIOS
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Lo que hacemos</span>
+        <h2 class="section-title">Soluciones digitales que venden</h2>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card">
+          <div class="card-icon" style="background:#eef2ff;color:#4f46e5;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3 class="card-title">Landing Pages profesionales</h3>
+          <p class="card-desc">Para negocios que necesitan capturar clientes desde el primer clic. R&aacute;pidas, optimizadas para Google y dise&ntilde;adas para convertir visitas en ventas.</p>
+          <span class="card-meta">Entrega en 5&ndash;7 d&iacute;as h&aacute;biles</span>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background:#fef3c7;color:#d97706;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="card-title">P&aacute;ginas web completas</h3>
+          <p class="card-desc">Portafolios, sitios de empresa, plataformas de reservas. Todo a medida, sin templates gen&eacute;ricos que hacen ver tu negocio igual que el de todos.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background:#ede9fe;color:#7c3aed;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3 class="card-title">Aplicaciones web</h3>
+          <p class="card-desc">&iquest;Tienes una idea de negocio que necesita software? La construimos. Desde sistemas internos hasta productos digitales listos para vender.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background:#d1fae5;color:#059669;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+          </div>
+          <h3 class="card-title">Men&uacute;s QR para restaurantes</h3>
+          <p class="card-desc">Tu carta siempre actualizada. El cliente escanea, navega y elige. Sin apps, sin impresiones, sin desactualizaci&oacute;n.</p>
+        </div>
+      </div>
+
+      <div class="servicios-include">
+        <p><strong>Todos nuestros proyectos incluyen:</strong> dominio, hosting del primer a&ntilde;o y 30 d&iacute;as de soporte post-lanzamiento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       CÓMO TRABAJAMOS
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="section proceso" id="como-funciona">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sin tecnicismos, sin sorpresas</span>
+        <h2 class="section-title">As&iacute; trabajamos</h2>
+      </div>
+
+      <div class="proceso-grid">
+        <div class="proceso-step">
+          <span class="proceso-num">01</span>
+          <h3 class="proceso-title">Nos cuentas tu idea</h3>
+          <p class="proceso-desc">Una llamada de 30 minutos. Gratis, sin compromiso. Entendemos tu negocio, tu cliente y tu objetivo.</p>
+        </div>
+        <div class="proceso-step">
+          <span class="proceso-num">02</span>
+          <h3 class="proceso-title">Te enviamos una propuesta clara</h3>
+          <p class="proceso-desc">Precio fijo, tiempo de entrega definido y exactamente qu&eacute; vas a recibir. Sin letras peque&ntilde;as.</p>
+        </div>
+        <div class="proceso-step">
+          <span class="proceso-num">03</span>
+          <h3 class="proceso-title">Construimos juntos</h3>
+          <p class="proceso-desc">Te mantenemos al tanto en cada paso. T&uacute; apruebas, nosotros ejecutamos.</p>
+        </div>
+        <div class="proceso-step">
+          <span class="proceso-num">04</span>
+          <h3 class="proceso-title">Lanzamos y te acompa&ntilde;amos</h3>
+          <p class="proceso-desc">El proyecto sale vivo y no desaparecemos. Soporte real de 30 d&iacute;as incluido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SAAS DESTACADO
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="section saas-section" id="saas">
+    <div class="container">
+      <div class="saas-box">
+        <div class="saas-badge">Nuevo</div>
+        <p class="saas-pretitle">&iquest;Tienes un equipo de ventas?</p>
+        <h2 class="saas-title">Nezzura Ventas</h2>
+        <p class="saas-sub">El gestor que s&iacute; vas a usar</p>
+        <p class="saas-desc">
+          Olvida las hojas de Excel y los WhatsApp perdidos. Nezzura Ventas centraliza tus clientes, cotizaciones y seguimiento en un solo lugar, desde cualquier dispositivo.
+        </p>
+
+        <div class="saas-features">
+          <div class="saas-feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Registro de clientes y leads
+          </div>
+          <div class="saas-feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Cotizaciones en minutos
+          </div>
+          <div class="saas-feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Seguimiento de ventas en tiempo real
+          </div>
+          <div class="saas-feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Reportes autom&aacute;ticos
+          </div>
+          <div class="saas-feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Acceso multi-usuario
+          </div>
+        </div>
+
+        <div class="saas-pricing">
+          <span class="saas-price">$445/mes</span>
+          <span class="saas-price-desc">Cancela cuando quieras &middot; Sin contratos anuales &middot; Soporte incluido</span>
+        </div>
+
+        <a href="#contacto" class="btn btn-primary btn-lg">Probar 14 d&iacute;as gratis &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       PRECIOS
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="section precios" id="precios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Precios directos</span>
+        <h2 class="section-title">Sin sorpresas, sin rodeos</h2>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card precio-card">
+          <h3 class="precio-title">Landing Page</h3>
+          <p class="precio-amount">Desde <strong>$4,999</strong> <span class="precio-currency">MXN</span></p>
+          <ul class="precio-list">
+            <li>Entrega en 5&ndash;7 d&iacute;as</li>
+            <li>Dominio + hosting a&ntilde;o 1 incluido</li>
+            <li>30 d&iacute;as de soporte</li>
+          </ul>
+          <a href="#contacto" class="btn btn-secondary btn-full">Lo quiero</a>
+        </div>
+
+        <div class="card precio-card precio-card-featured">
+          <div class="precio-badge">M&aacute;s popular</div>
+          <h3 class="precio-title">P&aacute;gina web completa</h3>
+          <p class="precio-amount">Desde <strong>$12,000</strong> <span class="precio-currency">MXN</span></p>
+          <ul class="precio-list">
+            <li>Entrega en 3&ndash;6 semanas</li>
+            <li>Dise&ntilde;o personalizado</li>
+            <li>SEO b&aacute;sico incluido</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary btn-full">Lo quiero</a>
+        </div>
+
+        <div class="card precio-card">
+          <h3 class="precio-title">Aplicaci&oacute;n web</h3>
+          <p class="precio-amount"><strong>A medida</strong></p>
+          <ul class="precio-list">
+            <li>Cotizaci&oacute;n personalizada</li>
+            <li>Agenda una llamada</li>
+            <li>Propuesta en 24 hrs</li>
+          </ul>
+          <a href="#contacto" class="btn btn-secondary btn-full">Cotizar</a>
+        </div>
+
+        <div class="card precio-card">
+          <h3 class="precio-title">Nezzura Ventas</h3>
+          <p class="precio-amount"><strong>$445</strong> <span class="precio-currency">/mes</span></p>
+          <ul class="precio-list">
+            <li>14 d&iacute;as gratis</li>
+            <li>Sin contratos</li>
+            <li>Soporte incluido</li>
+          </ul>
+          <a href="#contacto" class="btn btn-secondary btn-full">Probar gratis</a>
+        </div>
+      </div>
+
+      <div class="precios-outro">
+        <p>&iquest;No sabes qu&eacute; necesitas? Cu&eacute;ntanos tu negocio y te recomendamos lo que tiene m&aacute;s sentido para ti.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       CTA FINAL
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="section cta-section" id="contacto">
+    <div class="container">
+      <div class="cta-box">
+        <p class="cta-prefix">Tu competencia ya est&aacute; en internet.</p>
+        <h2 class="cta-title">&iquest;Y t&uacute;?</h2>
+        <p class="cta-desc">
+          Agenda una llamada de 30 minutos, gratis.<br />
+          Te decimos exactamente qu&eacute; necesitas y cu&aacute;nto te va a costar.<br />
+          <strong>Sin rodeos. Sin vendedores insistentes.</strong>
+        </p>
+
+        <a href="mailto:contacto@nezzuradigital.com" class="btn btn-cta">
+          contacto@nezzuradigital.com
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <!-- Reemplaza el número con el WhatsApp real de Nezzura Digital -->
+        <a href="https://wa.me/529980000000?text=Hola%20Nezzura%20Digital%2C%20quiero%20saber%20m%C3%A1s%20sobre%20sus%20servicios" class="cta-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          &iexcl;Escr&iacute;benos por WhatsApp!
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">Nezzura Digital</span>
+          <p class="footer-desc">Transformamos negocios locales en presencias digitales que venden.</p>
+          <p class="footer-location">Canc&uacute;n, M&eacute;xico</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <a href="#servicios">Servicios</a>
+          <a href="#precios">Precios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <a href="mailto:contacto@nezzuradigital.com">Email</a>
+          <!-- Reemplaza con el WhatsApp real -->
+          <a href="https://wa.me/529980000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} Nezzura Digital &middot; Canc&uacute;n, M&eacute;xico</p>
+      </div>
+    </div>
+  </footer>
 </Layout>
+
+<style>
+  /* ─────────────────────────────────────────────
+     CONTAINER & UTILITIES
+     ───────────────────────────────────────────── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 96px 0; }
+
+  .section-header { text-align: center; margin-bottom: 56px; }
+  .section-tag {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(224, 124, 93, 0.1);
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .section-desc { max-width: 600px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary); }
+
+  .grid { display: grid; gap: 24px; }
+  .grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-sm { padding: 10px 22px; font-size: 0.85rem; }
+  .btn-lg { padding: 16px 38px; font-size: 1.05rem; }
+  .btn-full { width: 100%; justify-content: center; }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(224, 124, 93, 0.3);
+  }
+  .btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(224, 124, 93, 0.4);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1.5px solid #d0d0d5;
+  }
+  .btn-secondary:hover { border-color: var(--text); background: rgba(0, 0, 0, 0.03); }
+  .btn-cta {
+    background: #ffffff;
+    color: var(--primary);
+    font-size: 1.05rem;
+    padding: 16px 36px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); }
+
+  /* ─────────────────────────────────────────────
+     NAVBAR
+     ───────────────────────────────────────────── */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(245, 245, 247, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .navbar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .navbar-logo {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .navbar-links { display: flex; align-items: center; gap: 28px; }
+  .navbar-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.3s;
+  }
+  .navbar-links a:hover { color: var(--text); }
+  .mobile-nav-cta { display: none; }
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  .nav-hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .nav-hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  .nav-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ─────────────────────────────────────────────
+     HERO
+     ───────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: #f5f5f7;
+    background-image:
+      radial-gradient(ellipse 100% 60% at 50% 0%, rgba(255,255,255,1) 0%, transparent 100%),
+      radial-gradient(ellipse 80% 50% at 50% 100%, rgba(230,232,240,0.5) 0%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 56px;
+  }
+  .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .hero-gradient { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 40% at 50% 30%, rgba(200,210,230,0.15) 0%, transparent 100%); }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, #c0c5d0 0.5px, transparent 0.5px);
+    background-size: 32px 32px; opacity: 0.25;
+    -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 30%, transparent 70%);
+    mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 30%, transparent 70%);
+  }
+  .hero-glow {
+    position: absolute; width: 500px; height: 500px; top: 20%; left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(224,124,93,0.06) 0%, transparent 70%);
+    border-radius: 50%; filter: blur(40px);
+  }
+  .hero-content {
+    position: relative; z-index: 5; flex: 1;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 0 24px 80px; max-width: 780px; margin: 0 auto;
+  }
+  .hero-stat {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;
+    margin-bottom: 32px;
+  }
+  .hero-stat-num {
+    font-family: var(--font-heading);
+    font-size: 2.8rem; font-weight: 900;
+    background: linear-gradient(135deg, var(--primary) 30%, var(--accent));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    line-height: 1;
+  }
+  .hero-stat-text {
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    color: var(--text-secondary);
+    line-height: 1.5;
+    max-width: 420px;
+    text-align: left;
+  }
+  .hero-title { margin: 0 0 20px; }
+  .hero-main {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5.5vw, 3.8rem);
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+  }
+  .hero-main-accent {
+    background: linear-gradient(135deg, var(--primary) 30%, var(--accent));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .hero-desc {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.7; color: var(--text-secondary);
+    margin: 0 0 36px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-bottom: 28px; }
+  .hero-location {
+    font-size: 0.85rem; color: var(--text-muted); margin: 0;
+    letter-spacing: 0.02em;
+  }
+  .hero-scroll {
+    position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 5;
+  }
+  .hero-scroll span { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #b0b0b8; }
+  .scroll-line {
+    width: 1px; height: 20px;
+    background: linear-gradient(to bottom, #c0c0c8, transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(0.6); }
+    50% { opacity: 1; transform: scaleY(1); }
+  }
+
+  /* ─────────────────────────────────────────────
+     EL PROBLEMA
+     ───────────────────────────────────────────── */
+  .problema { background: var(--bg-alt); }
+  .problema-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    max-width: 800px; margin: 0 auto;
+  }
+  .problema-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 20px 24px;
+    background: var(--bg); border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .problema-icon {
+    font-size: 1.1rem; color: var(--accent); font-weight: 700;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .problema-item p {
+    margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text);
+  }
+  .problema-outro {
+    text-align: center; margin-top: 36px;
+    font-size: 1.1rem; color: var(--text-secondary);
+  }
+  .problema-outro strong { color: var(--primary); }
+
+  /* ─────────────────────────────────────────────
+     SERVICIOS
+     ───────────────────────────────────────────── */
+  .servicios { background: var(--bg); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    transition: all 0.3s ease;
+  }
+  .card:hover { border-color: var(--accent-light); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); transform: translateY(-4px); }
+  .card-icon {
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 12px; margin-bottom: 16px;
+  }
+  .card-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem; font-weight: 700;
+    color: var(--primary); margin: 0 0 10px; letter-spacing: -0.02em;
+  }
+  .card-desc { font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary); margin: 0; }
+  .card-meta {
+    display: inline-block; margin-top: 14px;
+    font-size: 0.8rem; font-weight: 600; color: var(--accent);
+    background: rgba(224,124,93,0.08); padding: 4px 12px; border-radius: 6px;
+  }
+  .servicios-include {
+    text-align: center; margin-top: 40px;
+    padding: 20px; background: var(--bg-alt); border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .servicios-include p { margin: 0; font-size: 0.95rem; color: var(--text-secondary); }
+  .servicios-include strong { color: var(--primary); }
+
+  /* ─────────────────────────────────────────────
+     CÓMO TRABAJAMOS
+     ───────────────────────────────────────────── */
+  .proceso { background: var(--bg-alt); }
+  .proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+  }
+  .proceso-step { text-align: center; padding: 0 8px; }
+  .proceso-num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.8rem; font-weight: 900;
+    color: var(--accent); opacity: 0.25;
+    margin-bottom: 12px; line-height: 1;
+  }
+  .proceso-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem; font-weight: 700;
+    color: var(--primary); margin: 0 0 10px;
+  }
+  .proceso-desc { font-size: 0.92rem; line-height: 1.6; color: var(--text-secondary); margin: 0; }
+
+  /* ─────────────────────────────────────────────
+     SAAS DESTACADO
+     ───────────────────────────────────────────── */
+  .saas-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 96px 0;
+  }
+  .saas-box {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .saas-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-size: 0.7rem; font-weight: 700;
+    color: #ffffff; letter-spacing: 0.06em;
+    text-transform: uppercase; margin-bottom: 24px;
+  }
+  .saas-pretitle {
+    font-size: 1rem; font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    margin: 0 0 8px; letter-spacing: 0.02em;
+  }
+  .saas-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: #ffffff; margin: 0 0 4px;
+    letter-spacing: -0.03em;
+  }
+  .saas-sub {
+    font-family: var(--font-heading);
+    font-size: 1.2rem; font-weight: 500;
+    color: var(--accent-light);
+    margin: 0 0 24px;
+  }
+  .saas-desc {
+    font-size: 1rem; line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    max-width: 520px; margin: 0 auto 32px;
+  }
+  .saas-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    max-width: 520px; margin: 0 auto 36px;
+    text-align: left;
+  }
+  .saas-feature {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.92rem; color: rgba(255,255,255,0.85);
+  }
+  .saas-feature svg { flex-shrink: 0; color: #4ade80; }
+  .saas-pricing { margin-bottom: 32px; }
+  .saas-price {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.2rem; font-weight: 800;
+    color: #ffffff; letter-spacing: -0.02em;
+  }
+  .saas-price-desc {
+    display: block;
+    font-size: 0.85rem; color: rgba(255,255,255,0.5);
+    margin-top: 6px;
+  }
+  .saas-box .btn-primary {
+    box-shadow: 0 4px 20px rgba(224,124,93,0.4);
+  }
+
+  /* ─────────────────────────────────────────────
+     PRECIOS
+     ───────────────────────────────────────────── */
+  .precios { background: var(--bg); }
+  .precio-card {
+    text-align: center;
+    padding: 32px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .precio-list { flex: 1; margin-bottom: 0; }
+  .precio-card .btn-full {
+    margin-top: 16px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  .precio-card-featured {
+    position: relative;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+    transform: scale(1.03);
+  }
+  .precio-card-featured:hover { transform: scale(1.03) translateY(-4px); }
+  .precio-badge {
+    position: absolute; top: -12px; left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 16px;
+    background: var(--accent); border-radius: 50px;
+    font-family: var(--font-heading);
+    font-size: 0.7rem; font-weight: 700;
+    color: #ffffff; letter-spacing: 0.04em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .precio-title {
+    font-family: var(--font-heading);
+    font-size: 1.05rem; font-weight: 700;
+    color: var(--text-secondary); margin: 0 0 16px;
+  }
+  .precio-amount {
+    font-size: 1rem; color: var(--text-secondary);
+    margin: 0 0 20px;
+  }
+  .precio-amount strong {
+    font-family: var(--font-heading);
+    font-size: 2rem; font-weight: 800;
+    color: var(--text);
+  }
+  .precio-currency {
+    font-size: 0.85rem; font-weight: 500; color: var(--text-muted);
+  }
+  .precio-list {
+    list-style: none; padding: 0; margin: 0 0 24px;
+  }
+  .precio-list li {
+    padding: 8px 0;
+    font-size: 0.9rem; color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+  }
+  .precio-list li:last-child { border-bottom: none; }
+  .precios-outro {
+    text-align: center; margin-top: 40px;
+    font-size: 1rem; color: var(--text-secondary);
+    max-width: 500px; margin-left: auto; margin-right: auto;
+  }
+
+  /* ─────────────────────────────────────────────
+     CTA
+     ───────────────────────────────────────────── */
+  .cta-section {
+    background: var(--primary);
+    padding: 96px 0;
+  }
+  .cta-box { text-align: center; max-width: 640px; margin: 0 auto; }
+  .cta-prefix {
+    font-family: var(--font-heading);
+    font-size: 1.1rem; font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    margin: 0 0 8px;
+  }
+  .cta-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--text-light);
+    margin: 0 0 20px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+  .cta-desc {
+    font-size: 1.05rem; line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    margin: 0 0 32px;
+  }
+  .cta-desc strong { color: var(--accent-light); }
+  .cta-whatsapp {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 24px;
+    font-size: 0.95rem; color: rgba(255,255,255,0.5);
+  }
+  .cta-whatsapp svg { width: 20px; height: 20px; color: #25d366; }
+
+  /* ─────────────────────────────────────────────
+     FOOTER
+     ───────────────────────────────────────────── */
+  .footer { background: var(--primary-dark); padding: 56px 0 24px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-logo { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-light); letter-spacing: -0.02em; display: block; }
+  .footer-desc { font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.5); margin: 12px 0 4px; max-width: 260px; }
+  .footer-location { font-size: 0.85rem; color: rgba(255,255,255,0.35); margin: 0; }
+  .footer-links h4 { font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 16px; }
+  .footer-links a { display: block; font-size: 0.9rem; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--accent-light); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; }
+  .footer-bottom p { font-size: 0.85rem; color: rgba(255,255,255,0.35); margin: 0; }
+
+  /* ─────────────────────────────────────────────
+     RESPONSIVE
+     ───────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .problema-grid { grid-template-columns: 1fr; }
+    .saas-features { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .section { padding: 64px 0; }
+    .desktop-nav-cta { display: none; }
+    .mobile-nav-cta { display: flex !important; margin-top: 8px; }
+    .nav-hamburger { display: flex; }
+    .navbar-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: -10px 0 40px rgba(0,0,0,0.08);
+      padding: 40px;
+      z-index: 100;
+    }
+    .navbar-links.open { right: 0; }
+    .navbar-links a { font-size: 1.1rem; }
+    .hero-stat { flex-direction: column; align-items: center; text-align: center; }
+    .hero-stat-text { text-align: center; }
+    .hero-actions { flex-direction: column; align-items: center; }
+    .hero-actions .btn { width: 100%; max-width: 320px; justify-content: center; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-desc { max-width: 100%; }
+    .precio-card-featured { transform: none; }
+    .precio-card-featured:hover { transform: translateY(-4px); }
+  }
+  @media (max-width: 640px) {
+    .cta-section { padding: 64px 0; }
+    .btn-cta { padding: 14px 24px; font-size: 0.95rem; }
+    .saas-section { padding: 64px 0; }
+  }
+</style>
+
+<script>
+  function toggleNav() {
+    const links = document.getElementById('navLinks');
+    const btn = document.getElementById('navToggle');
+    const overlay = document.getElementById('navOverlay');
+    links.classList.toggle('open');
+    btn.classList.toggle('active');
+    overlay.classList.toggle('visible');
+    document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const links = document.getElementById('navLinks');
+    const btn = document.getElementById('navToggle');
+    const overlay = document.getElementById('navOverlay');
+
+    // Close nav when clicking outside
+    document.addEventListener('click', function(e) {
+      if (links.classList.contains('open') && !links.contains(e.target) && !btn.contains(e.target) && !overlay.contains(e.target)) {
+        closeNav();
+      }
+    });
+
+    // Close nav when a link is clicked
+    links.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', closeNav);
+    });
+
+    function closeNav() {
+      links.classList.remove('open');
+      btn.classList.remove('active');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
