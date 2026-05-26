@@ -609,7 +609,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   .sm-scope .sm-panel-item { font-size: clamp(2.5rem, 8vw, 4rem); }
 }
 @media (max-width: 640px) {
-  .sm-scope .staggered-menu-header { padding: 16px 20px; }
+  .sm-scope .staggered-menu-header { padding: 12px 28px; }
   .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; padding: 80px 24px 28px 24px; }
   .sm-scope .sm-prelayers { width: 100%; left: 0; right: 0; }
   .sm-scope .sm-panel-item { font-size: clamp(2rem, 9vw, 2.6rem); }
