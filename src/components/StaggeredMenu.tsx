@@ -556,6 +556,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
 .sm-scope .sm-logo-img { display: block; height: 32px; width: auto; object-fit: contain; }
+.sm-scope .sm-logo-link { display: inline-flex; align-items: center; text-decoration: none; color: #ffffff; }
 .sm-scope .sm-logo-text {
   margin-left: 10px;
   font-family: var(--font-sans), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;

@@ -430,6 +430,11 @@ import StaggeredMenu from '../components/StaggeredMenu.tsx';
 </Layout>
 
 <style>
+  /* ── Remove blue tap highlight on mobile for all interactive elements ── */
+  a, button, .btn, [role="button"] {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
   /* ─────────────────────────────────────────────
      CONTAINER & UTILITIES
      ───────────────────────────────────────────── */
