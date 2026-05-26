@@ -352,7 +352,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   return (
     <div
       className="sm-scope"
-      style={open && isFixed ? { position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, overflow: 'hidden', zIndex: 40, pointerEvents: 'none' } : { pointerEvents: 'none' }}
+      style={isFixed ? { position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, overflow: 'hidden', pointerEvents: 'none', zIndex: 40 } : { pointerEvents: 'none' }}
     >
       <div
         className={
