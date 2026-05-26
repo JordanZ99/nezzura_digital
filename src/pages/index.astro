@@ -1263,31 +1263,6 @@ import StaggeredMenu from '../components/StaggeredMenu.tsx';
     display: none;
   }
 
-  /* Dark theme overrides for StaggeredMenu panel */
-  .sm-scope .staggered-menu-panel {
-    background: #0F0F0F !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-  }
-  .sm-scope .sm-panel-item {
-    color: #ffffff !important;
-  }
-  .sm-scope .sm-panel-item:hover {
-    color: var(--accent, #F97316) !important;
-  }
-  .sm-scope .sm-socials-link {
-    color: rgba(255, 255, 255, 0.55) !important;
-  }
-  .sm-scope .sm-socials-link:hover {
-    color: var(--accent, #F97316) !important;
-  }
-  .sm-scope .sm-toggle {
-    font-weight: 600 !important;
-  }
-  .sm-scope .sm-toggle-textWrap {
-    width: 44px !important;
-    min-width: 44px !important;
-  }
 
   @media (max-width: 768px) {
     .section { padding: 64px 0; }
@@ -1295,7 +1270,7 @@ import StaggeredMenu from '../components/StaggeredMenu.tsx';
     .mobile-menu { display: block; }
     .desktop-nav-cta { display: none; }
     .mobile-nav-cta { display: flex !important; margin-top: 8px; }
-    .nav-hamburger { display: flex; }
+    .nav-hamburger { display: none; }
     .navbar-links {
       position: fixed;
       top: 0;

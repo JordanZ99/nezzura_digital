@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# Windows reserved device names
+NUL
+
 # macOS-specific files
 .DS_Store
 
