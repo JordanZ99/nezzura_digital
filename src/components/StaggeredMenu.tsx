@@ -336,6 +336,17 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     };
   }, [closeOnClickAway, open, closeMenu]);
 
+  // Lock body scroll when menu is open (prevent page scroll behind overlay)
+  React.useEffect(() => {
+    if (open) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = prev;
+      };
+    }
+  }, [open]);
+
   // Close menu when a nav link inside the panel is clicked
   React.useEffect(() => {
     if (!open || !panelRef.current) return;
