@@ -558,6 +558,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   display: flex; flex-direction: column;
   padding: 96px 28px 40px 28px;
   overflow-y: auto; z-index: 10;
+  pointer-events: auto;
 }
 .sm-scope [data-position='left'] .staggered-menu-panel { right: auto; left: 0; }
 
