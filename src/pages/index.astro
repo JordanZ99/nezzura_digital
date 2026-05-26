@@ -84,20 +84,8 @@ import StaggeredMenu from '../components/StaggeredMenu.tsx';
 
     <div class="hero-content">
       <div class="hero-stats-bar">
-        <div class="hero-stat-item">
-          <span class="hero-stat-value">78%</span>
-          <span class="hero-stat-label">pierden clientes sin web</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat-item">
-          <span class="hero-stat-value">5–7</span>
-          <span class="hero-stat-label">días de entrega</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat-item">
-          <span class="hero-stat-value">100%</span>
-          <span class="hero-stat-label">personalizado</span>
-        </div>
+        <span class="hero-stat-value">78%</span>
+        <span class="hero-stat-text">de los peque&ntilde;os negocios en M&eacute;xico pierde clientes por no tener presencia digital profesional</span>
       </div>
 
       <h1 class="hero-title">
@@ -698,42 +686,33 @@ import StaggeredMenu from '../components/StaggeredMenu.tsx';
     margin: 0 auto;
   }
 
-  /* Stats bar — like Stripe */
+  /* Stats bar — single impactful stat */
   .hero-stats-bar {
     display: flex;
     align-items: center;
-    gap: 32px;
+    justify-content: center;
+    gap: 12px;
     margin-bottom: 40px;
     padding: 16px 32px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 8px;
   }
-  .hero-stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-  }
   .hero-stat-value {
     font-family: var(--font-sans);
-    font-size: 1.6rem;
-    font-weight: 800;
+    font-size: 2rem;
+    font-weight: 900;
     color: var(--accent);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     line-height: 1;
+    flex-shrink: 0;
   }
-  .hero-stat-label {
-    font-size: 0.75rem;
+  .hero-stat-text {
+    font-size: 0.85rem;
     font-weight: 500;
-    color: var(--text-muted);
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-  }
-  .hero-stat-divider {
-    width: 1px;
-    height: 28px;
-    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.5;
+    text-align: left;
   }
 
   .hero-title { margin: 0 0 20px; }
@@ -1254,7 +1233,7 @@ import StaggeredMenu from '../components/StaggeredMenu.tsx';
   @media (max-width: 900px) {
     .problema-grid { grid-template-columns: 1fr; }
     .saas-features { grid-template-columns: 1fr; }
-    .hero-stats-bar { gap: 20px; padding: 14px 20px; flex-wrap: wrap; justify-content: center; }
+    .hero-stats-bar { gap: 8px; padding: 14px 20px; flex-wrap: wrap; justify-content: center; }
   }
   /* ─────────────────────────────────────────────
      MOBILE MENU (StaggeredMenu)
@@ -1291,8 +1270,8 @@ import StaggeredMenu from '../components/StaggeredMenu.tsx';
     }
     .navbar-links.open { right: 0; }
     .navbar-links a { font-size: 1.05rem; }
-    .hero-stats-bar { flex-direction: column; gap: 0; padding: 16px; }
-    .hero-stat-divider { width: 40px; height: 1px; margin: 12px 0; }
+    .hero-stats-bar { flex-direction: column; gap: 4px; padding: 16px 20px; }
+    .hero-stat-value { font-size: 1.6rem; }
     .hero-actions {
       flex-direction: column;
       align-items: center;
