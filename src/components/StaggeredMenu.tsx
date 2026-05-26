@@ -359,7 +359,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       <GradualBlur
         target="parent"
         position="top"
-        height="8rem"
+        height="4.8rem"
         strength={1.5}
         divCount={6}
         curve="ease-out"
@@ -408,6 +408,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
               width={110}
               height={24}
             />
+            <span className="sm-logo-text">Nezzura Digital</span>
           </div>
 
           <button
@@ -542,6 +543,15 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
 .sm-scope .sm-logo-img { display: block; height: 32px; width: auto; object-fit: contain; }
+.sm-scope .sm-logo-text {
+  margin-left: 10px;
+  font-family: var(--font-sans), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
 
 /* ── Toggle button (hamburger) ── */
 .sm-scope .sm-toggle {
