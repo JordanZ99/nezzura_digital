@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Beams from '../components/Beams.tsx';
+import StaggeredMenu from '../components/StaggeredMenu.tsx';
 ---
 
 <Layout>
@@ -29,6 +30,36 @@ import Beams from '../components/Beams.tsx';
     </div>
     <div class="nav-overlay" id="navOverlay"></div>
   </nav>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       STAGGERED MENU (mobile only — replaces navbar on <768px)
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="mobile-menu">
+    <StaggeredMenu
+      position="right"
+      colors={['#1A1A1A', '#111111']}
+      items={[
+        { label: 'Servicios', ariaLabel: 'Ver servicios', link: '#servicios' },
+        { label: 'Cómo funciona', ariaLabel: 'Cómo trabajamos', link: '#como-funciona' },
+        { label: 'Precios', ariaLabel: 'Ver precios', link: '#precios' },
+        { label: 'Contacto', ariaLabel: 'Agenda una llamada', link: '#contacto' }
+      ]}
+      socialItems={[
+        { label: 'Email', link: 'mailto:contacto@nezzuradigital.com' },
+        { label: 'WhatsApp', link: 'https://wa.me/529980000000' }
+      ]}
+      displaySocials={true}
+      displayItemNumbering={false}
+      logoUrl="/nezzuraLogo.png"
+      menuButtonColor="#ffffff"
+      openMenuButtonColor="#ffffff"
+      accentColor="#F97316"
+      isFixed={true}
+      changeMenuColorOnOpen={true}
+      closeOnClickAway={true}
+      client:load
+    />
+  </div>
 
   <!-- ════════════════════════════════════════════════════════════════
        HERO
@@ -1225,8 +1256,43 @@ import Beams from '../components/Beams.tsx';
     .saas-features { grid-template-columns: 1fr; }
     .hero-stats-bar { gap: 20px; padding: 14px 20px; flex-wrap: wrap; justify-content: center; }
   }
+  /* ─────────────────────────────────────────────
+     MOBILE MENU (StaggeredMenu)
+     ───────────────────────────────────────────── */
+  .mobile-menu {
+    display: none;
+  }
+
+  /* Dark theme overrides for StaggeredMenu panel */
+  .sm-scope .staggered-menu-panel {
+    background: #0F0F0F !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+  }
+  .sm-scope .sm-panel-item {
+    color: #ffffff !important;
+  }
+  .sm-scope .sm-panel-item:hover {
+    color: var(--accent, #F97316) !important;
+  }
+  .sm-scope .sm-socials-link {
+    color: rgba(255, 255, 255, 0.55) !important;
+  }
+  .sm-scope .sm-socials-link:hover {
+    color: var(--accent, #F97316) !important;
+  }
+  .sm-scope .sm-toggle {
+    font-weight: 600 !important;
+  }
+  .sm-scope .sm-toggle-textWrap {
+    width: 44px !important;
+    min-width: 44px !important;
+  }
+
   @media (max-width: 768px) {
     .section { padding: 64px 0; }
+    nav.navbar { display: none; }
+    .mobile-menu { display: block; }
     .desktop-nav-cta { display: none; }
     .mobile-nav-cta { display: flex !important; margin-top: 8px; }
     .nav-hamburger { display: flex; }
