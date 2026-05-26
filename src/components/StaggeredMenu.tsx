@@ -542,7 +542,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   border: none;
   cursor: pointer;
   padding: 10px;
-  margin-right: 12px;
+  margin-right: 36px;
 }
 .sm-scope .sm-toggle:focus-visible { outline: 2px solid #ffffffaa; outline-offset: 4px; border-radius: 4px; }
 
