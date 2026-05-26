@@ -234,6 +234,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         if (socialLinks.length) gsap.set(socialLinks, { y: 25, opacity: 0 });
 
         busyRef.current = false;
+        openRef.current = false;
+        setOpen(false);
       }
     });
   }, [position]);
@@ -306,8 +308,6 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   const closeMenu = useCallback(() => {
     if (openRef.current) {
-      openRef.current = false;
-      setOpen(false);
       onMenuClose?.();
       playClose();
       animateIcon(false);
