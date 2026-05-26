@@ -623,16 +623,16 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   padding-right: 1.4em;
 }
 .sm-scope .sm-panel-itemLabel { display: inline-block; will-change: transform; transform-origin: 50% 100%; }
-.sm-scope .sm-panel-item:hover { color: var(--sm-accent, #F97316); }
-.sm-scope .sm-panel-item:focus-visible { outline: 2px solid var(--sm-accent, #F97316); outline-offset: 4px; }
+.sm-scope .sm-panel-item:hover { color: var(--sm-accent, #E8304A); }
+.sm-scope .sm-panel-item:focus-visible { outline: 2px solid var(--sm-accent, #E8304A); outline-offset: 4px; }
 
 /* ── Socials (dark theme) ── */
 .sm-scope .sm-socials { margin-top: auto; padding-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
-.sm-scope .sm-socials-title { margin: 0; font-size: 1rem; font-weight: 500; color: var(--sm-accent, #F97316); }
+.sm-scope .sm-socials-title { margin: 0; font-size: 1rem; font-weight: 500; color: var(--sm-accent, #E8304A); }
 .sm-scope .sm-socials-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: row; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .sm-scope .sm-socials-link { font-size: 1.2rem; font-weight: 500; color: rgba(255, 255, 255, 0.55); text-decoration: none; position: relative; padding: 2px 0; display: inline-block; transition: color 0.3s ease, opacity 0.3s ease; }
-.sm-scope .sm-socials-link:hover { color: var(--sm-accent, #F97316); }
-.sm-scope .sm-socials-link:focus-visible { outline: 2px solid var(--sm-accent, #F97316); outline-offset: 3px; }
+.sm-scope .sm-socials-link:hover { color: var(--sm-accent, #E8304A); }
+.sm-scope .sm-socials-link:focus-visible { outline: 2px solid var(--sm-accent, #E8304A); outline-offset: 3px; }
 .sm-scope .sm-socials-list .sm-socials-link { opacity: 1; transition: opacity 0.3s ease; }
 .sm-scope .sm-socials-list:hover .sm-socials-link:not(:hover) { opacity: 0.35; }
 .sm-scope .sm-socials-list:focus-within .sm-socials-link:not(:focus-visible) { opacity: 0.35; }
