@@ -411,8 +411,6 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                 alt="Logo"
                 className="sm-logo-img block h-8 w-auto object-contain"
                 draggable={false}
-                width={110}
-                height={24}
               />
               <span className="sm-logo-text">Nezzura Digital</span>
             </div>

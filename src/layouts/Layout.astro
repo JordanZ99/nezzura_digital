@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- ── Fade-in overlay: hides white flash on reload ── -->
+    <style>
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        background: #0F0F0F;
+        pointer-events: none;
+        animation: pageFadeIn 0.5s ease 0.2s forwards;
+      }
+      @keyframes pageFadeIn {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+    </style>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
