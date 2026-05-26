@@ -352,7 +352,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   return (
     <div
       className="sm-scope"
-      style={isFixed ? { position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', overflow: 'hidden', zIndex: 40 } : { width: '100%', height: '100%', zIndex: 40 }}
+      style={isFixed ? { position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, overflow: 'hidden', zIndex: 40 } : { width: '100%', height: '100%', zIndex: 40 }}
     >
       <div
         className={
@@ -542,6 +542,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   border: none;
   cursor: pointer;
   padding: 10px;
+  margin-right: 12px;
 }
 .sm-scope .sm-toggle:focus-visible { outline: 2px solid #ffffffaa; outline-offset: 4px; border-radius: 4px; }
 
@@ -609,7 +610,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   .sm-scope .sm-panel-item { font-size: clamp(2.5rem, 8vw, 4rem); }
 }
 @media (max-width: 640px) {
-  .sm-scope .staggered-menu-header { padding: 12px 28px; }
+  .sm-scope .staggered-menu-header { padding: 12px 24px; }
   .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; padding: 80px 24px 28px 24px; }
   .sm-scope .sm-prelayers { width: 100%; left: 0; right: 0; }
   .sm-scope .sm-panel-item { font-size: clamp(2rem, 9vw, 2.6rem); }
