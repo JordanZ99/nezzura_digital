@@ -617,27 +617,25 @@ import Layout from '../layouts/Layout.astro';
   }
   .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 
-  /* Dot grid pattern — like Linear.app */
+  /* Dot grid pattern — like Linear.app (3% opacity, full background) */
   .hero-grid {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0.5px, transparent 0.5px);
-    background-size: 28px 28px;
-    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 25%, transparent 72%);
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 25%, transparent 72%);
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
   }
 
-  /* Radial orange glow */
+  /* Radial orange glow — centered behind the title, subtle, fades to edges */
   .hero-glow {
     position: absolute;
-    width: 600px;
-    height: 600px;
-    top: 15%;
+    width: 700px;
+    height: 700px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    background: radial-gradient(circle, rgba(249, 115, 22, 0.06) 0%, rgba(249, 115, 22, 0.02) 40%, transparent 70%);
+    transform: translate(-50%, -55%);
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.05) 0%, rgba(249, 115, 22, 0.02) 40%, transparent 70%);
     border-radius: 50%;
-    filter: blur(60px);
+    pointer-events: none;
   }
 
   /* Subtle gradient overlay */
