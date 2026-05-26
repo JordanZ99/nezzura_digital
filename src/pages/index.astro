@@ -8,15 +8,17 @@ import Layout from '../layouts/Layout.astro';
        ════════════════════════════════════════════════════════════════ -->
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
-      <a href="#" class="navbar-logo">Nezzura Digital</a>
+      <a href="#" class="navbar-logo">
+        <img src="/nezzuraLogo.png" alt="Nezzura" class="navbar-logo-img" />
+      </a>
       <div class="navbar-links" id="navLinks">
         <a href="#servicios">Servicios</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#precios">Precios</a>
         <a href="#contacto">Contacto</a>
-        <a href="#contacto" class="btn btn-primary btn-sm mobile-nav-cta">Agenda una llamada &rarr;</a>
+        <a href="#contacto" class="btn btn-outline btn-sm mobile-nav-cta">Agenda una llamada &rarr;</a>
       </div>
-      <a href="#contacto" class="btn btn-primary btn-sm desktop-nav-cta">Agenda una llamada &rarr;</a>
+      <a href="#contacto" class="btn btn-outline btn-sm desktop-nav-cta">Agenda una llamada &rarr;</a>
       <button class="nav-hamburger" id="navToggle" aria-label="Menú" onclick="toggleNav()">
         <span></span>
         <span></span>
@@ -31,20 +33,32 @@ import Layout from '../layouts/Layout.astro';
        ════════════════════════════════════════════════════════════════ -->
   <header class="hero" id="hero">
     <div class="hero-bg">
-      <div class="hero-gradient"></div>
       <div class="hero-grid"></div>
       <div class="hero-glow"></div>
+      <div class="hero-gradient"></div>
     </div>
 
     <div class="hero-content">
-      <p class="hero-stat">
-        <span class="hero-stat-num">78%</span>
-        <span class="hero-stat-text">de los pequeños negocios en México pierde clientes por no tener presencia digital profesional</span>
-      </p>
+      <div class="hero-stats-bar">
+        <div class="hero-stat-item">
+          <span class="hero-stat-value">78%</span>
+          <span class="hero-stat-label">pierden clientes sin web</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <span class="hero-stat-value">5–7</span>
+          <span class="hero-stat-label">días de entrega</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <span class="hero-stat-value">100%</span>
+          <span class="hero-stat-label">personalizado</span>
+        </div>
+      </div>
 
       <h1 class="hero-title">
         <span class="hero-main">Tu negocio existe.</span>
-        <span class="hero-main hero-main-accent">Ahora necesita existir en internet.</span>
+        <span class="hero-main hero-main-highlight">Ahora necesita <span class="hero-accent-word">existir</span> en internet.</span>
       </h1>
 
       <p class="hero-desc">
@@ -64,6 +78,11 @@ import Layout from '../layouts/Layout.astro';
       <div class="scroll-line"></div>
     </div>
   </header>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SEPARATOR
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider"></div>
 
   <!-- ════════════════════════════════════════════════════════════════
        EL PROBLEMA
@@ -101,6 +120,11 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ════════════════════════════════════════════════════════════════
+       SEPARATOR
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider"></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
        SERVICIOS
        ════════════════════════════════════════════════════════════════ -->
   <section class="section servicios" id="servicios">
@@ -112,8 +136,8 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="grid grid-4">
         <div class="card">
-          <div class="card-icon" style="background:#eef2ff;color:#4f46e5;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
           </div>
           <h3 class="card-title">Landing Pages profesionales</h3>
           <p class="card-desc">Para negocios que necesitan capturar clientes desde el primer clic. R&aacute;pidas, optimizadas para Google y dise&ntilde;adas para convertir visitas en ventas.</p>
@@ -121,24 +145,24 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="card">
-          <div class="card-icon" style="background:#fef3c7;color:#d97706;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
           <h3 class="card-title">P&aacute;ginas web completas</h3>
           <p class="card-desc">Portafolios, sitios de empresa, plataformas de reservas. Todo a medida, sin templates gen&eacute;ricos que hacen ver tu negocio igual que el de todos.</p>
         </div>
 
         <div class="card">
-          <div class="card-icon" style="background:#ede9fe;color:#7c3aed;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
           <h3 class="card-title">Aplicaciones web</h3>
           <p class="card-desc">&iquest;Tienes una idea de negocio que necesita software? La construimos. Desde sistemas internos hasta productos digitales listos para vender.</p>
         </div>
 
         <div class="card">
-          <div class="card-icon" style="background:#d1fae5;color:#059669;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
           </div>
           <h3 class="card-title">Men&uacute;s QR para restaurantes</h3>
           <p class="card-desc">Tu carta siempre actualizada. El cliente escanea, navega y elige. Sin apps, sin impresiones, sin desactualizaci&oacute;n.</p>
@@ -150,6 +174,11 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SEPARATOR
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider"></div>
 
   <!-- ════════════════════════════════════════════════════════════════
        CÓMO TRABAJAMOS
@@ -187,6 +216,11 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ════════════════════════════════════════════════════════════════
+       SEPARATOR
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider"></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
        SAAS DESTACADO
        ════════════════════════════════════════════════════════════════ -->
   <section class="section saas-section" id="saas">
@@ -194,7 +228,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="saas-box">
         <div class="saas-badge">Nuevo</div>
         <p class="saas-pretitle">&iquest;Tienes un equipo de ventas?</p>
-        <h2 class="saas-title">Nezzura Ventas</h2>
+        <h2 class="saas-title">Nezzura <span class="saas-title-accent">Ventas</span></h2>
         <p class="saas-sub">El gestor que s&iacute; vas a usar</p>
         <p class="saas-desc">
           Olvida las hojas de Excel y los WhatsApp perdidos. Nezzura Ventas centraliza tus clientes, cotizaciones y seguimiento en un solo lugar, desde cualquier dispositivo.
@@ -232,6 +266,11 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       SEPARATOR
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider"></div>
 
   <!-- ════════════════════════════════════════════════════════════════
        PRECIOS
@@ -297,6 +336,11 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ════════════════════════════════════════════════════════════════
+       SEPARATOR
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="section-divider"></div>
+
+  <!-- ════════════════════════════════════════════════════════════════
        CTA FINAL
        ════════════════════════════════════════════════════════════════ -->
   <section class="section cta-section" id="contacto">
@@ -315,7 +359,6 @@ import Layout from '../layouts/Layout.astro';
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:8px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
 
-        <!-- Reemplaza el número con el WhatsApp real de Nezzura Digital -->
         <a href="https://wa.me/529980000000?text=Hola%20Nezzura%20Digital%2C%20quiero%20saber%20m%C3%A1s%20sobre%20sus%20servicios" class="cta-whatsapp" target="_blank" rel="noopener noreferrer">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           &iexcl;Escr&iacute;benos por WhatsApp!
@@ -331,7 +374,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="footer-logo">Nezzura Digital</span>
+          <img src="/nezzuraLogo.png" alt="Nezzura" class="footer-logo-img" />
           <p class="footer-desc">Transformamos negocios locales en presencias digitales que venden.</p>
           <p class="footer-location">Canc&uacute;n, M&eacute;xico</p>
         </div>
@@ -344,7 +387,6 @@ import Layout from '../layouts/Layout.astro';
         <div class="footer-links">
           <h4>Contacto</h4>
           <a href="mailto:contacto@nezzuradigital.com">Email</a>
-          <!-- Reemplaza con el WhatsApp real -->
           <a href="https://wa.me/529980000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
       </div>
@@ -366,71 +408,101 @@ import Layout from '../layouts/Layout.astro';
   .section-tag {
     display: inline-block;
     padding: 6px 18px;
-    background: rgba(224, 124, 93, 0.1);
-    border-radius: 50px;
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
+    background: rgba(249, 115, 22, 0.08);
+    border: 1px solid rgba(249, 115, 22, 0.15);
+    border-radius: 100px;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
     font-weight: 600;
     color: var(--accent);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
   .section-title {
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 800;
-    color: var(--primary);
+    color: var(--text);
     margin: 0 0 16px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     line-height: 1.2;
   }
-  .section-desc { max-width: 600px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary); }
+  .section-desc { max-width: 600px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); }
 
   .grid { display: grid; gap: 24px; }
   .grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 
+  /* ─────────────────────────────────────────────
+     SECTION DIVIDER
+     ───────────────────────────────────────────── */
+  .section-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0;
+  }
+
+  /* ─────────────────────────────────────────────
+     BUTTONS — sharp corners, dark theme
+     ───────────────────────────────────────────── */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 28px;
-    border-radius: 50px;
-    font-family: var(--font-heading);
-    font-size: 0.95rem;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
     border: none;
+    line-height: 1.4;
   }
-  .btn-sm { padding: 10px 22px; font-size: 0.85rem; }
-  .btn-lg { padding: 16px 38px; font-size: 1.05rem; }
+  .btn-sm { padding: 8px 20px; font-size: 0.82rem; }
+  .btn-lg { padding: 16px 36px; font-size: 1rem; }
   .btn-full { width: 100%; justify-content: center; }
 
   .btn-primary {
     background: var(--accent);
     color: #ffffff;
-    box-shadow: 0 4px 14px rgba(224, 124, 93, 0.3);
   }
   .btn-primary:hover {
     background: var(--accent-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(224, 124, 93, 0.4);
   }
+
   .btn-secondary {
     background: transparent;
-    color: var(--text);
-    border: 1.5px solid #d0d0d5;
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
-  .btn-secondary:hover { border-color: var(--text); background: rgba(0, 0, 0, 0.03); }
+  .btn-secondary:hover {
+    border-color: var(--text);
+    color: var(--text);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid rgba(249, 115, 22, 0.4);
+  }
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
   .btn-cta {
     background: #ffffff;
-    color: var(--primary);
-    font-size: 1.05rem;
-    padding: 16px 36px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #0F0F0F;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 600;
   }
-  .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); }
+  .btn-cta:hover {
+    background: #f0f0f0;
+    transform: translateY(-1px);
+  }
 
   /* ─────────────────────────────────────────────
      NAVBAR
@@ -441,10 +513,14 @@ import Layout from '../layouts/Layout.astro';
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(245, 245, 247, 0.85);
+    background: transparent;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  }
+  .navbar.scrolled {
+    background: rgba(15, 15, 15, 0.8);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
   .navbar-inner {
     max-width: 1100px;
@@ -453,26 +529,28 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 56px;
+    height: 60px;
   }
   .navbar-logo {
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: var(--text);
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    letter-spacing: -0.02em;
+  }
+  .navbar-logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
   }
   .navbar-links { display: flex; align-items: center; gap: 28px; }
   .navbar-links a {
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: #888888;
     text-decoration: none;
     letter-spacing: 0.01em;
-    transition: color 0.3s;
+    transition: color 0.2s;
   }
-  .navbar-links a:hover { color: var(--text); }
+  .navbar-links a:hover { color: #ffffff; }
   .mobile-nav-cta { display: none; }
   .nav-hamburger {
     display: none;
@@ -489,7 +567,7 @@ import Layout from '../layouts/Layout.astro';
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--text);
+    background: #888888;
     border-radius: 2px;
     transition: all 0.3s ease;
   }
@@ -505,11 +583,11 @@ import Layout from '../layouts/Layout.astro';
   .nav-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 99;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
   }
   .nav-overlay.visible {
     opacity: 1;
@@ -522,85 +600,141 @@ import Layout from '../layouts/Layout.astro';
   .hero {
     position: relative;
     min-height: 100vh;
-    background: #f5f5f7;
-    background-image:
-      radial-gradient(ellipse 100% 60% at 50% 0%, rgba(255,255,255,1) 0%, transparent 100%),
-      radial-gradient(ellipse 80% 50% at 50% 100%, rgba(230,232,240,0.5) 0%, transparent 100%);
+    background: #0F0F0F;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding-top: 56px;
+    padding-top: 60px;
   }
   .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
-  .hero-gradient { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 40% at 50% 30%, rgba(200,210,230,0.15) 0%, transparent 100%); }
+
+  /* Dot grid pattern — like Linear.app */
   .hero-grid {
-    position: absolute; inset: 0;
-    background-image: radial-gradient(circle, #c0c5d0 0.5px, transparent 0.5px);
-    background-size: 32px 32px; opacity: 0.25;
-    -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 30%, transparent 70%);
-    mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 30%, transparent 70%);
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0.5px, transparent 0.5px);
+    background-size: 28px 28px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 25%, transparent 72%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 25%, transparent 72%);
   }
+
+  /* Radial orange glow */
   .hero-glow {
-    position: absolute; width: 500px; height: 500px; top: 20%; left: 50%;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 15%;
+    left: 50%;
     transform: translateX(-50%);
-    background: radial-gradient(circle, rgba(224,124,93,0.06) 0%, transparent 70%);
-    border-radius: 50%; filter: blur(40px);
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.06) 0%, rgba(249, 115, 22, 0.02) 40%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
   }
+
+  /* Subtle gradient overlay */
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 100% 30% at 50% 0%, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+  }
+
   .hero-content {
-    position: relative; z-index: 5; flex: 1;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    text-align: center; padding: 0 24px 80px; max-width: 780px; margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px 80px;
+    max-width: 780px;
+    margin: 0 auto;
   }
-  .hero-stat {
-    display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;
-    margin-bottom: 32px;
+
+  /* Stats bar — like Stripe */
+  .hero-stats-bar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 40px;
+    padding: 16px 32px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
   }
-  .hero-stat-num {
-    font-family: var(--font-heading);
-    font-size: 2.8rem; font-weight: 900;
-    background: linear-gradient(135deg, var(--primary) 30%, var(--accent));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  .hero-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .hero-stat-value {
+    font-family: var(--font-sans);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.02em;
     line-height: 1;
   }
-  .hero-stat-text {
-    font-size: clamp(0.9rem, 1.2vw, 1rem);
-    color: var(--text-secondary);
-    line-height: 1.5;
-    max-width: 420px;
-    text-align: left;
+  .hero-stat-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
   }
+  .hero-stat-divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
   .hero-title { margin: 0 0 20px; }
   .hero-main {
     display: block;
-    font-family: var(--font-heading);
+    font-family: var(--font-sans);
     font-size: clamp(2rem, 5.5vw, 3.8rem);
     font-weight: 800;
-    color: var(--text);
+    color: #ffffff;
     letter-spacing: -0.03em;
     line-height: 1.12;
   }
-  .hero-main-accent {
-    background: linear-gradient(135deg, var(--primary) 30%, var(--accent));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  .hero-main-highlight {
+    color: #ffffff;
+  }
+  .hero-accent-word {
+    color: var(--accent);
   }
   .hero-desc {
     font-size: clamp(1rem, 1.5vw, 1.2rem);
-    line-height: 1.7; color: var(--text-secondary);
+    line-height: 1.7;
+    color: #888888;
     margin: 0 0 36px;
   }
   .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-bottom: 28px; }
   .hero-location {
-    font-size: 0.85rem; color: var(--text-muted); margin: 0;
+    font-size: 0.82rem;
+    color: #666666;
+    margin: 0;
     letter-spacing: 0.02em;
   }
   .hero-scroll {
-    position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
-    display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 5;
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 5;
   }
-  .hero-scroll span { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #b0b0b8; }
+  .hero-scroll span { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #555555; }
   .scroll-line {
-    width: 1px; height: 20px;
-    background: linear-gradient(to bottom, #c0c0c8, transparent);
+    width: 1px;
+    height: 20px;
+    background: linear-gradient(to bottom, #555555, transparent);
     animation: scrollPulse 2s ease-in-out infinite;
   }
   @keyframes scrollPulse {
@@ -611,70 +745,116 @@ import Layout from '../layouts/Layout.astro';
   /* ─────────────────────────────────────────────
      EL PROBLEMA
      ───────────────────────────────────────────── */
-  .problema { background: var(--bg-alt); }
+  .problema { background: #0A0A0A; }
   .problema-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
-    max-width: 800px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
   }
   .problema-item {
-    display: flex; gap: 14px; align-items: flex-start;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
     padding: 20px 24px;
-    background: var(--bg); border-radius: 12px;
-    border: 1px solid var(--border);
+    background: #111111;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.2s ease;
+  }
+  .problema-item:hover {
+    border-color: rgba(249, 115, 22, 0.3);
+    background: #151515;
   }
   .problema-icon {
-    font-size: 1.1rem; color: var(--accent); font-weight: 700;
-    flex-shrink: 0; margin-top: 1px;
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
   }
   .problema-item p {
-    margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text);
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
   }
   .problema-outro {
-    text-align: center; margin-top: 36px;
-    font-size: 1.1rem; color: var(--text-secondary);
+    text-align: center;
+    margin-top: 36px;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
   }
-  .problema-outro strong { color: var(--primary); }
+  .problema-outro strong { color: #ffffff; }
 
   /* ─────────────────────────────────────────────
      SERVICIOS
      ───────────────────────────────────────────── */
-  .servicios { background: var(--bg); }
+  .servicios { background: #0F0F0F; }
   .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 16px;
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
     padding: 32px 28px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
-  .card:hover { border-color: var(--accent-light); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); transform: translateY(-4px); }
+  .card:hover {
+    border-color: rgba(249, 115, 22, 0.25);
+    background: #161616;
+  }
   .card-icon {
-    width: 48px; height: 48px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 12px; margin-bottom: 16px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    color: var(--accent);
+    background: rgba(249, 115, 22, 0.08);
+    border: 1px solid rgba(249, 115, 22, 0.12);
   }
   .card-title {
-    font-family: var(--font-heading);
-    font-size: 1.15rem; font-weight: 700;
-    color: var(--primary); margin: 0 0 10px; letter-spacing: -0.02em;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
   }
-  .card-desc { font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary); margin: 0; }
+  .card-desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0;
+  }
   .card-meta {
-    display: inline-block; margin-top: 14px;
-    font-size: 0.8rem; font-weight: 600; color: var(--accent);
-    background: rgba(224,124,93,0.08); padding: 4px 12px; border-radius: 6px;
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(249, 115, 22, 0.08);
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(249, 115, 22, 0.12);
   }
   .servicios-include {
-    text-align: center; margin-top: 40px;
-    padding: 20px; background: var(--bg-alt); border-radius: 12px;
-    border: 1px solid var(--border);
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: #0A0A0A;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
   }
-  .servicios-include p { margin: 0; font-size: 0.95rem; color: var(--text-secondary); }
-  .servicios-include strong { color: var(--primary); }
+  .servicios-include p { margin: 0; font-size: 0.92rem; color: var(--text-secondary); }
+  .servicios-include strong { color: #ffffff; }
 
   /* ─────────────────────────────────────────────
      CÓMO TRABAJAMOS
      ───────────────────────────────────────────── */
-  .proceso { background: var(--bg-alt); }
+  .proceso { background: #0A0A0A; }
   .proceso-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -683,96 +863,138 @@ import Layout from '../layouts/Layout.astro';
   .proceso-step { text-align: center; padding: 0 8px; }
   .proceso-num {
     display: block;
-    font-family: var(--font-heading);
-    font-size: 2.8rem; font-weight: 900;
-    color: var(--accent); opacity: 0.25;
-    margin-bottom: 12px; line-height: 1;
+    font-family: var(--font-sans);
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--accent);
+    opacity: 0.15;
+    margin-bottom: 12px;
+    line-height: 1;
   }
   .proceso-title {
-    font-family: var(--font-heading);
-    font-size: 1.15rem; font-weight: 700;
-    color: var(--primary); margin: 0 0 10px;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px;
   }
-  .proceso-desc { font-size: 0.92rem; line-height: 1.6; color: var(--text-secondary); margin: 0; }
+  .proceso-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0;
+  }
 
   /* ─────────────────────────────────────────────
      SAAS DESTACADO
      ───────────────────────────────────────────── */
   .saas-section {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(180deg, #0F0F0F 0%, #111111 100%);
     padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .saas-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
   }
   .saas-box {
     text-align: center;
     max-width: 680px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
   }
   .saas-badge {
     display: inline-block;
     padding: 4px 14px;
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 50px;
-    font-family: var(--font-heading);
-    font-size: 0.7rem; font-weight: 700;
-    color: #ffffff; letter-spacing: 0.06em;
-    text-transform: uppercase; margin-bottom: 24px;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: 100px;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
   }
   .saas-pretitle {
-    font-size: 1rem; font-weight: 500;
-    color: rgba(255,255,255,0.6);
-    margin: 0 0 8px; letter-spacing: 0.02em;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 0 0 8px;
+    letter-spacing: 0.02em;
   }
   .saas-title {
-    font-family: var(--font-heading);
+    font-family: var(--font-sans);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 900;
-    color: #ffffff; margin: 0 0 4px;
+    color: #ffffff;
+    margin: 0 0 4px;
     letter-spacing: -0.03em;
   }
+  .saas-title-accent {
+    color: var(--accent);
+  }
   .saas-sub {
-    font-family: var(--font-heading);
-    font-size: 1.2rem; font-weight: 500;
-    color: var(--accent-light);
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-secondary);
     margin: 0 0 24px;
   }
   .saas-desc {
-    font-size: 1rem; line-height: 1.7;
-    color: rgba(255,255,255,0.7);
-    max-width: 520px; margin: 0 auto 32px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 520px;
+    margin: 0 auto 32px;
   }
   .saas-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    max-width: 520px; margin: 0 auto 36px;
+    gap: 12px;
+    max-width: 520px;
+    margin: 0 auto 36px;
     text-align: left;
   }
   .saas-feature {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 0.92rem; color: rgba(255,255,255,0.85);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.65);
   }
-  .saas-feature svg { flex-shrink: 0; color: #4ade80; }
+  .saas-feature svg { flex-shrink: 0; color: var(--accent); }
   .saas-pricing { margin-bottom: 32px; }
   .saas-price {
     display: block;
-    font-family: var(--font-heading);
-    font-size: 2.2rem; font-weight: 800;
-    color: #ffffff; letter-spacing: -0.02em;
+    font-family: var(--font-sans);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
   }
   .saas-price-desc {
     display: block;
-    font-size: 0.85rem; color: rgba(255,255,255,0.5);
+    font-size: 0.82rem;
+    color: var(--text-muted);
     margin-top: 6px;
-  }
-  .saas-box .btn-primary {
-    box-shadow: 0 4px 20px rgba(224,124,93,0.4);
   }
 
   /* ─────────────────────────────────────────────
      PRECIOS
      ───────────────────────────────────────────── */
-  .precios { background: var(--bg); }
+  .precios { background: #0F0F0F; }
   .precio-card {
     text-align: center;
     padding: 32px 24px 24px;
@@ -787,104 +1009,198 @@ import Layout from '../layouts/Layout.astro';
     flex-shrink: 0;
     box-sizing: border-box;
   }
-  .precio-card-featured {
+  .card.precio-card-featured {
     position: relative;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 1px var(--accent);
+    border-color: rgba(249, 115, 22, 0.3);
     transform: scale(1.03);
   }
-  .precio-card-featured:hover { transform: scale(1.03) translateY(-4px); }
+  .precio-card-featured:hover {
+    transform: scale(1.03);
+  }
   .precio-badge {
-    position: absolute; top: -12px; left: 50%;
+    position: absolute;
+    top: -13px;
+    left: 50%;
     transform: translateX(-50%);
     padding: 4px 16px;
-    background: var(--accent); border-radius: 50px;
-    font-family: var(--font-heading);
-    font-size: 0.7rem; font-weight: 700;
-    color: #ffffff; letter-spacing: 0.04em; text-transform: uppercase;
+    background: var(--accent);
+    border-radius: 100px;
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     white-space: nowrap;
   }
   .precio-title {
-    font-family: var(--font-heading);
-    font-size: 1.05rem; font-weight: 700;
-    color: var(--text-secondary); margin: 0 0 16px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin: 0 0 16px;
   }
   .precio-amount {
-    font-size: 1rem; color: var(--text-secondary);
+    font-size: 1rem;
+    color: var(--text-secondary);
     margin: 0 0 20px;
   }
   .precio-amount strong {
-    font-family: var(--font-heading);
-    font-size: 2rem; font-weight: 800;
-    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
   }
   .precio-currency {
-    font-size: 0.85rem; font-weight: 500; color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
   }
   .precio-list {
-    list-style: none; padding: 0; margin: 0 0 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
   }
   .precio-list li {
     padding: 8px 0;
-    font-size: 0.9rem; color: var(--text-secondary);
-    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.55);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
   .precio-list li:last-child { border-bottom: none; }
   .precios-outro {
-    text-align: center; margin-top: 40px;
-    font-size: 1rem; color: var(--text-secondary);
-    max-width: 500px; margin-left: auto; margin-right: auto;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* ─────────────────────────────────────────────
      CTA
      ───────────────────────────────────────────── */
   .cta-section {
-    background: var(--primary);
+    background: #0A0A0A;
     padding: 96px 0;
+    position: relative;
+    overflow: hidden;
   }
-  .cta-box { text-align: center; max-width: 640px; margin: 0 auto; }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cta-box {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
   .cta-prefix {
-    font-family: var(--font-heading);
-    font-size: 1.1rem; font-weight: 500;
-    color: rgba(255,255,255,0.5);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
     margin: 0 0 8px;
   }
   .cta-title {
-    font-family: var(--font-heading);
+    font-family: var(--font-sans);
     font-size: clamp(2.5rem, 5vw, 3.8rem);
     font-weight: 900;
-    color: var(--text-light);
+    color: #ffffff;
     margin: 0 0 20px;
     letter-spacing: -0.03em;
     line-height: 1.1;
   }
   .cta-desc {
-    font-size: 1.05rem; line-height: 1.7;
-    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.55);
     margin: 0 0 32px;
   }
-  .cta-desc strong { color: var(--accent-light); }
+  .cta-desc strong { color: var(--accent); }
   .cta-whatsapp {
-    display: inline-flex; align-items: center; gap: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 24px;
-    font-size: 0.95rem; color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
   }
+  .cta-whatsapp:hover { color: #ffffff; }
   .cta-whatsapp svg { width: 20px; height: 20px; color: #25d366; }
 
   /* ─────────────────────────────────────────────
      FOOTER
      ───────────────────────────────────────────── */
-  .footer { background: var(--primary-dark); padding: 56px 0 24px; }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-  .footer-logo { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-light); letter-spacing: -0.02em; display: block; }
-  .footer-desc { font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.5); margin: 12px 0 4px; max-width: 260px; }
-  .footer-location { font-size: 0.85rem; color: rgba(255,255,255,0.35); margin: 0; }
-  .footer-links h4 { font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 16px; }
-  .footer-links a { display: block; font-size: 0.9rem; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 10px; transition: color 0.3s; }
-  .footer-links a:hover { color: var(--accent-light); }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; }
-  .footer-bottom p { font-size: 0.85rem; color: rgba(255,255,255,0.35); margin: 0; }
+  .footer {
+    background: #080808;
+    padding: 56px 0 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-logo-img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+  .footer-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 12px 0 4px;
+    max-width: 260px;
+  }
+  .footer-location {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.25);
+    margin: 0;
+  }
+  .footer-links h4 {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 16px;
+  }
+  .footer-links a {
+    display: block;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--accent); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding-top: 24px;
+    text-align: center;
+  }
+  .footer-bottom p {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.25);
+    margin: 0;
+  }
 
   /* ─────────────────────────────────────────────
      RESPONSIVE
@@ -892,6 +1208,7 @@ import Layout from '../layouts/Layout.astro';
   @media (max-width: 900px) {
     .problema-grid { grid-template-columns: 1fr; }
     .saas-features { grid-template-columns: 1fr; }
+    .hero-stats-bar { gap: 20px; padding: 14px 20px; flex-wrap: wrap; justify-content: center; }
   }
   @media (max-width: 768px) {
     .section { padding: 64px 0; }
@@ -904,7 +1221,7 @@ import Layout from '../layouts/Layout.astro';
       right: -100%;
       width: 280px;
       height: 100vh;
-      background: rgba(255,255,255,0.98);
+      background: rgba(15, 15, 15, 0.98);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       flex-direction: column;
@@ -912,20 +1229,20 @@ import Layout from '../layouts/Layout.astro';
       align-items: center;
       gap: 24px;
       transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: -10px 0 40px rgba(0,0,0,0.08);
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
       padding: 40px;
       z-index: 100;
     }
     .navbar-links.open { right: 0; }
-    .navbar-links a { font-size: 1.1rem; }
-    .hero-stat { flex-direction: column; align-items: center; text-align: center; }
-    .hero-stat-text { text-align: center; }
+    .navbar-links a { font-size: 1.05rem; }
+    .hero-stats-bar { flex-direction: column; gap: 0; padding: 16px; }
+    .hero-stat-divider { width: 40px; height: 1px; margin: 12px 0; }
     .hero-actions { flex-direction: column; align-items: center; }
     .hero-actions .btn { width: 100%; max-width: 320px; justify-content: center; }
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     .footer-desc { max-width: 100%; }
     .precio-card-featured { transform: none; }
-    .precio-card-featured:hover { transform: translateY(-4px); }
+    .precio-card-featured:hover { transform: none; }
   }
   @media (max-width: 640px) {
     .cta-section { padding: 64px 0; }
@@ -968,5 +1285,18 @@ import Layout from '../layouts/Layout.astro';
       overlay.classList.remove('visible');
       document.body.style.overflow = '';
     }
+
+    // Navbar scroll effect — adds background blur on scroll
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', function() {
+      const currentScroll = window.scrollY;
+      if (currentScroll > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      lastScroll = currentScroll;
+    });
   });
 </script>
