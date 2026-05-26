@@ -1,5 +1,6 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import GradualBlur from './GradualBlur';
 
 export interface StaggeredMenuItem {
   label: string;
@@ -354,6 +355,16 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       className="sm-scope"
       style={isFixed ? { position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, overflow: 'hidden', pointerEvents: 'none', zIndex: 40 } : { pointerEvents: 'none' }}
     >
+      {/* Gradual blur gradient at top — blurs content behind the header on scroll */}
+      <GradualBlur
+        target="parent"
+        position="top"
+        height="8rem"
+        strength={1.5}
+        divCount={6}
+        curve="ease-out"
+        zIndex={25}
+      />
       <div
         className={
           (className ? className + ' ' : '') + 'staggered-menu-wrapper pointer-events-none relative z-40'
