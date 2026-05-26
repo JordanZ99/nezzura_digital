@@ -399,17 +399,24 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between bg-transparent pointer-events-none z-20"
           aria-label="Main navigation header"
         >
-          <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
-            <img
-              src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}
-              alt="Logo"
-              className="sm-logo-img block h-8 w-auto object-contain"
-              draggable={false}
-              width={110}
-              height={24}
-            />
-            <span className="sm-logo-text">Nezzura Digital</span>
-          </div>
+          <a
+            href="#"
+            className="sm-logo-link"
+            aria-label="Ir al inicio"
+            onClick={() => { if (openRef.current) closeMenu(); }}
+          >
+            <div className="sm-logo flex items-center select-none pointer-events-auto">
+              <img
+                src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}
+                alt="Logo"
+                className="sm-logo-img block h-8 w-auto object-contain"
+                draggable={false}
+                width={110}
+                height={24}
+              />
+              <span className="sm-logo-text">Nezzura Digital</span>
+            </div>
+          </a>
 
           <button
             ref={toggleBtnRef}
@@ -530,6 +537,12 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       </div>
 
       <style>{`
+/* ── Remove blue tap highlight on mobile ── */
+.sm-scope,
+.sm-scope * {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 /* ── Wrapper ── */
 .sm-scope .staggered-menu-wrapper { position: relative; z-index: 40; pointer-events: none; }
 
