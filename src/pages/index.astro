@@ -10,6 +10,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="navbar-inner">
       <a href="#" class="navbar-logo">
         <img src="/nezzuraLogo.png" alt="Nezzura" class="navbar-logo-img" />
+        <span class="navbar-logo-text">Nezzura Digital</span>
       </a>
       <div class="navbar-links" id="navLinks">
         <a href="#servicios">Servicios</a>
@@ -534,12 +535,20 @@ import Layout from '../layouts/Layout.astro';
   .navbar-logo {
     display: flex;
     align-items: center;
+    gap: 10px;
     text-decoration: none;
   }
   .navbar-logo-img {
     height: 32px;
     width: auto;
     display: block;
+  }
+  .navbar-logo-text {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
   }
   .navbar-links { display: flex; align-items: center; gap: 28px; }
   .navbar-links a {
@@ -1237,8 +1246,17 @@ import Layout from '../layouts/Layout.astro';
     .navbar-links a { font-size: 1.05rem; }
     .hero-stats-bar { flex-direction: column; gap: 0; padding: 16px; }
     .hero-stat-divider { width: 40px; height: 1px; margin: 12px 0; }
-    .hero-actions { flex-direction: column; align-items: center; }
-    .hero-actions .btn { width: 100%; max-width: 320px; justify-content: center; }
+    .hero-actions {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-actions .btn {
+      width: 100%;
+      max-width: 340px;
+      justify-content: center;
+      box-sizing: border-box;
+    }
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     .footer-desc { max-width: 100%; }
     .precio-card-featured { transform: none; }
