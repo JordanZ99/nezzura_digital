@@ -20,13 +20,13 @@ import Layout from '../layouts/Layout.astro';
         <a href="#contacto" class="btn btn-outline btn-sm mobile-nav-cta">Agenda una llamada &rarr;</a>
       </div>
       <a href="#contacto" class="btn btn-outline btn-sm desktop-nav-cta">Agenda una llamada &rarr;</a>
-      <button class="nav-hamburger" id="navToggle" aria-label="Menú" onclick="toggleNav()">
+      <button class="nav-hamburger" id="navToggle" aria-label="Menú">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
-    <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+    <div class="nav-overlay" id="navOverlay"></div>
   </nav>
 
   <!-- ════════════════════════════════════════════════════════════════
@@ -1270,20 +1270,31 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <script>
-  function toggleNav() {
-    const links = document.getElementById('navLinks');
-    const btn = document.getElementById('navToggle');
-    const overlay = document.getElementById('navOverlay');
-    links.classList.toggle('open');
-    btn.classList.toggle('active');
-    overlay.classList.toggle('visible');
-    document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
-  }
-
   document.addEventListener('DOMContentLoaded', function() {
     const links = document.getElementById('navLinks');
     const btn = document.getElementById('navToggle');
     const overlay = document.getElementById('navOverlay');
+    const navbar = document.getElementById('navbar');
+
+    function toggleNav() {
+      links.classList.toggle('open');
+      btn.classList.toggle('active');
+      overlay.classList.toggle('visible');
+      document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function closeNav() {
+      links.classList.remove('open');
+      btn.classList.remove('active');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+
+    // Hamburger button toggle
+    btn.addEventListener('click', toggleNav);
+
+    // Overlay click to close
+    overlay.addEventListener('click', toggleNav);
 
     // Close nav when clicking outside
     document.addEventListener('click', function(e) {
@@ -1297,24 +1308,13 @@ import Layout from '../layouts/Layout.astro';
       link.addEventListener('click', closeNav);
     });
 
-    function closeNav() {
-      links.classList.remove('open');
-      btn.classList.remove('active');
-      overlay.classList.remove('visible');
-      document.body.style.overflow = '';
-    }
-
     // Navbar scroll effect — adds background blur on scroll
-    const navbar = document.getElementById('navbar');
-    let lastScroll = 0;
     window.addEventListener('scroll', function() {
-      const currentScroll = window.scrollY;
-      if (currentScroll > 20) {
+      if (window.scrollY > 20) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
-      lastScroll = currentScroll;
     });
   });
 </script>
